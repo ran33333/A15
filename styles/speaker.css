@@ -1,0 +1,206 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+/* the styles for the elements */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+	width: 800px;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px #931420 solid;
+	background: #fffded;
+}
+body section {width: 525px; float: right; padding-left: 20px; padding-right: 20px; padding-bottom: 20px; background-color: antiquewhite}
+body aside{width: 215px; float: left; padding-left: 20px; padding-bottom: 20px;background-color: antiquewhite}
+
+/* the styles for the header */
+header img {
+	float: left; padding-left: 30px; padding-right: 30px;
+}
+header h1 {
+	font-size: 170%;
+	color: #800000;
+
+}
+
+	h2 .shadow {
+	color: #800000; text-shadow: 2px 2px
+}
+
+header h2 {
+	font-size: 130%;
+	font-style: italic;
+
+}
+header{ border-bottom: 3px #931420 solid; background-image:
+		-webkit-linear-gradient(30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%,
+			#f6bb73 100%); padding-top: 1.5em; padding-bottom: 2em }
+
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+}
+#nav_menu ul li { float: left;
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li { float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+#nav_menu ul li a {
+	text-align: center;
+	display: block;
+	width: 160px;
+	padding-bottom: 1em ;
+	padding-top: 1em;
+	text-decoration: none;
+	background-color: #800000;
+	color: white;
+	font-weight: bold;
+}
+#current ul li{color: yellow}
+#nav_menu ul li a.lastitem { border-right: none; }
+
+/* the styles for the section */
+main {
+	clear: left; }
+h1 {font-size: 150%; padding-top: .5em; padding-bottom: .25em; margin: 0}
+section h1 {
+	font-size: 150%; padding-top: .3em;padding-bottom: .3em;
+}
+aside h1 {
+	font-size: 150%; padding-top: .3em;padding-bottom: .3em;
+}
+section h2 {
+	font-size: 130%;
+	color: #800000;
+	padding-top: 0;padding-bottom: .5em; border-top: #800000 2px;border-bottom:#800000 2px ;
+}
+section img {float: right; margin-bottom: auto;margin-top: auto;margin-left: auto; border: black 1px}
+aside h2 {
+	font-size: 130%;
+	color: #800000;
+	padding-top: .5em;padding-bottom: .5em;
+}
+section h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+aside h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+section a:link, a:visited, and a:active {
+	color: blue
+}
+aside  a:link, a:visited, and a:active {
+	color: blue
+}
+
+aside a:hover {
+	color: blue;
+	font-style: italic
+}
+section img{ padding-bottom: 1em}
+aside img{ padding-bottom: 1em}
+section p {
+	text-align: left;
+	padding-bottom: .5em;
+}
+aside p {
+	text-align: center;
+	padding-bottom: .5em;
+}
+/*main h1 {border-top: 3px #931420 solid; border-bottom:3px #931420 solid}*/
+section blockquote{ font-style: italic;
+padding-bottom: 2em; padding-left: 2em}
+section ul{padding-bottom: .25em; padding-left: 1.25em }
+section li{padding-bottom: 0.35em}
+
+/* the styles for the footer */
+footer{background-color: #931420; color: white; padding-top: 1em; padding-bottom: 1em ; clear: left}
+
+
+
+
+
+/* working for A10 before doing A11
+
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+
+}
+
+ the styles for the header
+header img {
+	float: left;
+}
+header h1 {
+	font-size: 170%;
+	color: #800000;
+	text-indent: 30px
+}
+
+h2 .shadow {
+	color: #800000; text-shadow: 2px 2px
+}
+
+header h2 {
+	font-size: 130%;
+	font-style: italic;
+	text-indent: 30px
+}
+
+
+
+
+ the styles for the section
+main {
+	clear: left}
+
+main h1 {
+	font-size: 150%
+}
+
+main h2 {
+	font-size: 130%;
+	color: #800000
+}
+
+main h3 {
+	font-size: 105%
+}
+
+main a:link, a:visited, and a:active {
+	color: red
+}
+
+main a:hover {
+	color: blue;
+	font-style: italic
+}
+
+main p {
+	text-align: center
+}
+
+
+ the styles for the footer
+
+ */

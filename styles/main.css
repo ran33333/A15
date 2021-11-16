@@ -1,0 +1,439 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background-color: white;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	width: 98%;
+	max-width: 960px;
+	margin: 0 auto;
+	border: 3px solid #931420;
+	background-color: #fffded;
+}
+a:focus, a:hover {
+	font-style: italic;
+}
+/* the styles for the header */
+header {
+	padding: 1.5em 0 2em 0;
+	border-bottom: 3px solid #931420;
+	background-image: -moz-linear-gradient(
+			30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -webkit-linear-gradient(
+			30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -o-linear-gradient(
+			30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: linear-gradient(
+			30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+}
+header h2 {
+	font-size: 175%;
+	color: #800000;
+}
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+}
+header img {
+	float: left;
+	padding: 0 3.75%;
+}
+.shadow {
+	text-shadow: 2px 2px 2px #800000;
+}
+/* the styles for the navigation menu */
+#nav_menu ul {
+	display: flex;
+	flex-basis: 100%;
+	justify-content: space-between;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#nav_menu ul li {
+	flex-basis: 20%;
+}
+#nav_menu ul li a {
+	display: block;
+	text-align: center;
+	padding: 1em 0;
+	text-decoration: none;
+	background-color: #800000;
+	color: white;
+	font-weight: bold;
+}
+#nav_menu a.current {
+	color: yellow;
+}
+#nav_menu ul ul {
+	width: 100%;
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#nav_menu ul li ul {
+	width: 20%;
+}
+
+/* the styles for the main content */
+main {
+	display: flex;
+}
+
+/* the styles for the section */
+section {
+	flex-basis: 70%;
+	order: 2;
+	padding: 0 2.5% 20px 2.5%;
+}
+section h1 {
+	font-size: 150%;
+	padding: .5em 0 .25em 0;
+	margin: 0;
+}
+section h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+section p {
+	padding-bottom: .5em;
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+section ul {
+	padding: 0 0 .25em 1.25em;
+	list-style-type: circle;
+}
+section li {
+	padding-bottom: .35em;
+}
+
+/* the styles for the article */
+article {
+	padding: .5em 0;
+	border-top: 2px solid #800000;
+	border-bottom: 2px solid #800000;
+}
+article h2 {
+	padding-top: 0;
+}
+article h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+article img {
+	float: right;
+	max-width: 40%;
+	min-width: 150px;
+	margin: .5em 0 1em 1em;
+	border: 1px solid black;
+}
+
+/* the styles for the aside */
+aside {
+	flex-basis: 30%;
+	order: 1;
+	padding: 0 0 20px 2.5%;
+}
+aside h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+
+aside h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+aside img {
+	padding-bottom: 1em;
+}
+
+/* the styles for the footer */
+footer {
+	background-color: #931420;
+	clear: both;
+
+}
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
+#mobile_menu {
+	display: none;
+}
+
+/* tablet portrait to standard 960 */
+@media only screen and (max-width: 959px) {
+	section h1 { font-size: 135%; }
+	section h2, aside h2 { font-size: 120%; }
+}
+
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 767px) {
+	header img { float: none; }
+	header {
+		display: flex;
+		text-align: center;
+	}
+	header, footer {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	header h2, header h3 { flex-basis: 100%; }
+	main { flex-direction: column; }
+	section {
+		order: 1;
+		width: 95%;
+	}
+	aside {
+		order: 2;
+		padding-right: 2.5%;
+		width: 95%;
+	}
+	article img { max-width: 30%; }
+	#speakers {
+		column-count: 2;
+	}
+	#nav_menu {
+		display: none;
+	}
+	#mobile_menu {
+		display: block;
+	}
+	.slicknav_menu {
+		background-color: #800000 !important;
+	}
+}
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px) {
+	body { font-size: 90%; }
+/* code^^^^ built from c9*/
+
+/* Good for A13(original CSS worked) *{
+	padding: 0;
+	margin: 0;
+}
+/* the styles for the elements */
+/*body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+	width: 800px;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px #931420 solid;
+	background: #fffded;
+}
+body section {width: 525px; float: right; padding-left: 20px; padding-right: 20px; padding-bottom: 20px; background-color: antiquewhite}
+body aside{width: 215px; float: left; padding-left: 20px; padding-bottom: 20px;background-color: antiquewhite}
+
+/* the styles for the header */
+/*header img {
+	float: left; padding-left: 30px; padding-right: 30px;
+}
+header h1 {
+	font-size: 170%;
+	color: #800000;
+
+}
+
+	h2 .shadow {
+	color: #800000; text-shadow: 2px 2px
+}
+
+header h2 {
+	font-size: 130%;
+	font-style: italic;
+
+}
+header{ border-bottom: 3px #931420 solid; background-image:
+		-webkit-linear-gradient(30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%,
+			#f6bb73 100%); padding-top: 1.5em; padding-bottom: 2em }
+
+
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+}
+#nav_menu ul li { float: left;
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li { float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+#nav_menu ul li a {
+	text-align: center;
+	display: block;
+	width: 160px;
+	padding-bottom: 1em ;
+	padding-top: 1em;
+	text-decoration: none;
+	background-color: #800000;
+	color: white;
+	font-weight: bold;
+	 }
+#current ul li{color: yellow}
+#nav_menu ul li a.lastitem { border-right: none; }
+/* the styles for the section */
+/*main {
+	clear: left; }
+h1 {font-size: 150%; padding-top: .5em; padding-bottom: .25em; margin: 0}
+section h1 {
+	font-size: 150%; padding-top: .3em;padding-bottom: .3em;
+}
+aside h1 {
+	font-size: 150%; padding-top: .3em;padding-bottom: .3em;
+}
+section h2 {
+	font-size: 130%;
+	color: #800000;
+	padding-top: 0;padding-bottom: .5em; border-top: #800000 2px;border-bottom:#800000 2px ;
+}
+section img {float: right; margin-bottom: auto;margin-top: auto;margin-left: auto; border: black 1px}
+aside h2 {
+	font-size: 130%;
+	color: #800000;
+	padding-top: .5em;padding-bottom: .5em;
+}
+section h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+aside h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+section a:link, a:visited, and a:active {
+	color: blue;
+}
+aside  a:link, a:visited, and a:active {
+	color: blue;
+}
+section a:hover {
+	color: blue;
+	font-style: italic
+}
+aside a:hover {
+	color: blue;
+	font-style: italic
+}
+section img{ padding-bottom: 1em}
+aside img{ padding-bottom: 1em}
+section p {
+	text-align: left;
+	padding-bottom: .5em;
+}
+aside p {
+	text-align: center;
+	padding-bottom: .5em;
+}
+/*main h1 {border-top: 3px #931420 solid; border-bottom:3px #931420 solid}*/
+/*section blockquote{ font-style: italic;
+padding-bottom: 2em; padding-left: 2em}
+section ul{padding-bottom: .25em; padding-left: 1.25em; list-style: circle }
+section li{padding-bottom: 0.35em}
+
+/* the styles for the footer */
+/*footer{background-color: #931420; color: white; padding-top: 1em; padding-bottom: 1em ; clear: left}
+
+
+
+
+
+/* working for A10 before doing A11
+
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+
+}
+
+ the styles for the header
+header img {
+	float: left;
+}
+header h1 {
+	font-size: 170%;
+	color: #800000;
+	text-indent: 30px
+}
+
+h2 .shadow {
+	color: #800000; text-shadow: 2px 2px
+}
+
+header h2 {
+	font-size: 130%;
+	font-style: italic;
+	text-indent: 30px
+}
+
+
+
+
+ the styles for the section
+main {
+	clear: left}
+
+main h1 {
+	font-size: 150%
+}
+
+main h2 {
+	font-size: 130%;
+	color: #800000
+}
+
+main h3 {
+	font-size: 105%
+}
+
+main a:link, a:visited, and a:active {
+	color: red
+}
+
+main a:hover {
+	color: blue;
+	font-style: italic
+}
+
+main p {
+	text-align: center
+}
+
+
+ the styles for the footer
+
+ */
